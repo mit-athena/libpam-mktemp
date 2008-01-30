@@ -1,0 +1,24 @@
+This is the README for pam_mktemp, a PAM SESSION module which will
+securely create a temporary file (ands set an environment variable to
+point to it) in pam_open_session, and unlinks the file in
+pam_close_session.
+
+This is useful for applications like setting XAUTHORITY to a secure
+temporary file in an environment where home directories are in a
+network filesystem.  You would do this adding:
+
+session    optional   pam_mktemp.so var=XAUTHORITY prefix=/tmp/xauth
+
+to /etc/pam.d/common-session.
+
+You must specify the var option; the prefix option defaults to
+/tmp/tempfile if not specified.  The argument passed to mkstemp when
+creating this file will be /tmp/xauth-UID-XXXXXX, where UID is the
+user id for the session being opened.
+
+It supports two additional options: debug (enabling debugging output)
+and an dir (which causes pam_mktemp to create a temporary directory,
+rather than a temporary file).  So, the pam_mktemp line session line
+to create a login session temporary directory might look like:
+
+session    optional   pam_mktemp.so debug dir prefix=/var/tmp var=SESSION_TEMPDIR

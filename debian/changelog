@@ -1,0 +1,6 @@
+libpam-mktemp (0.1-0debathena1) unstable; urgency=low
+
+  * Initial Release.
+  * This package generalizes and replaces libpam-xauthority.
+
+ -- Tim Abbott <tabbott@mit.edu>  Tue, 29 Jan 2008 22:20:30 -0500
