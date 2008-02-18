@@ -8,7 +8,10 @@ Build-Depends: @cdbs@, libpam0g-dev
 Package: libpam-mktemp
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: PAM module to call mkstemp
+Description: PAM module to create temporary session files
+ This PAM module securely creates a temporary file or directory with
+ mkstemp, and sets an environment variable to point to its location.
+ .
  A common use is to set the XAUTHORITY environment variable to a
  securely created temporary file, for use when home directories are in
  a networked filesystem.

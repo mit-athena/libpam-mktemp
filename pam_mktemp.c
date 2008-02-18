@@ -58,7 +58,7 @@ pam_sm_open_session(pam_handle_t *pamh, int flags, int argc, const char **argv)
     const char *prefix = "/tmp/tempfile";
     const char *var = NULL;
     int fd;
-    int dir=0;
+    int dir = 0;
 
     for (i = 0; i < argc; i++) {
 	if (strcmp(argv[i], "debug") == 0)
@@ -67,7 +67,7 @@ pam_sm_open_session(pam_handle_t *pamh, int flags, int argc, const char **argv)
 	    prefix = argv[i] + 7;
 	else if (strncmp(argv[i], "var=", 4) == 0)
 	    var = argv[i] + 4;
-	else if (strncmp(argv[i], "dir", 3) == 0)
+	else if (strcmp(argv[i], "dir") == 0)
 	    dir = 1;
     }
 
@@ -151,7 +151,6 @@ pam_sm_close_session(pam_handle_t *pamh, int flags, int argc, const char **argv)
     int i;
     int debug = 0;
     const char *mktemp_buf;
-    const char *dir = "/tmp";
     const char *var = NULL;
 
     for (i = 0; i < argc; i++) {
