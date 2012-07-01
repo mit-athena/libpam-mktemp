@@ -1,3 +1,9 @@
+libpam-mktemp (0.1-0debathena3) UNRELEASED; urgency=low
+
+  * Bump debian/compat to 6
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 01 Jul 2012 12:21:41 -0400
+
 libpam-mktemp (0.1-0debathena2) unstable; urgency=low
 
   * Remove DEB_AUTO_UPDATE_DEBIAN_CONTROL.
