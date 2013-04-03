@@ -1,8 +1,11 @@
 libpam-mktemp (0.1-0debathena3) UNRELEASED; urgency=low
 
   * Bump debian/compat to 6
+  * Switch from control.in to control (Trac: #561)
+  * Bump Standards-Version to 3.9.3
+  * Bump compat level to 7
 
- -- Jonathan Reed <jdreed@mit.edu>  Sun, 01 Jul 2012 12:21:41 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 13:31:11 -0400
 
 libpam-mktemp (0.1-0debathena2) unstable; urgency=low
 
