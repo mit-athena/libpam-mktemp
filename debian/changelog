@@ -1,3 +1,9 @@
+libpam-mktemp (0.2-0debathena1) unstable; urgency=low
+
+  * Release 0.2
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 09 Feb 2014 06:38:45 -0500
+
 libpam-mktemp (0.1-0debathena3) unstable; urgency=low
 
   [ Jonathan Reed ]
